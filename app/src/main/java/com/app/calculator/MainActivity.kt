@@ -1,6 +1,6 @@
 package com.app.calculator
 
-import kotlinx.android.synthetic.main.activity_main.answer_tv
+import kotlinx.android.synthetic.main.activity_main.result
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,17 +16,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun appendToComputation(view: View) {
+    fun appendToCalculation(view: View) {
         val buttonClicked = view as? Button
         buttonClicked?.let {
             computation.append(it.text.toString())
+            result.text = computation.toString()
         }
     }
 
-    fun computeResult(view: View) {
+    fun calculateResult(view: View) {
         val resultButton = view as? Button
         resultButton?.let {
-            answer_tv.text = eval(computation.toString())
+            result.text = eval(computation.toString())
         }
     }
 
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clear(view: View) {
-        answer_tv.text = ""
+        result.text = ""
         computation.clear()
     }
 }
