@@ -9,26 +9,26 @@ import org.mariuszgromada.math.mxparser.Expression
 
 class MainActivity : AppCompatActivity() {
 
-    private val computation = StringBuilder()
+    private val calculation = StringBuilder()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+                setContentView(R.layout.activity_main)
     }
 
     fun appendToCalculation(view: View) {
         val buttonClicked = view as? Button
         buttonClicked?.let {
-            computation.append(it.text.toString())
-            result.text = computation.toString()
+            calculation.append(it.text.toString())
+            result.text = calculation.toString()
         }
     }
 
     fun calculateResult(view: View) {
-        val resultButton = view as? Button
-        resultButton?.let {
-            result.text = eval(computation.toString())
-        }
+        val calculationResult = eval(calculation.toString())
+        result.text = calculationResult
+        calculation.clear()
+        calculation.append(calculationResult)
     }
 
     private fun eval(mathExpression: String): String {
@@ -37,6 +37,11 @@ class MainActivity : AppCompatActivity() {
 
     fun clear(view: View) {
         result.text = ""
-        computation.clear()
+        calculation.clear()
+    }
+
+    fun undo(view: View) {
+        result.text = result.text.dropLast(1)
+        calculation.deleteCharAt(calculation.length -1 )
     }
 }

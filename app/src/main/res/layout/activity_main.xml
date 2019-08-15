@@ -21,7 +21,7 @@
                 android:gravity="center"
                 android:text="0"
                 android:layout_width="match_parent"
-                android:layout_height="50dp" />
+                android:layout_height="50dp"/>
 
     </LinearLayout>
 
@@ -36,7 +36,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="7"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
@@ -45,7 +45,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="8"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
@@ -54,16 +54,8 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="9"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-        <Button
-                android:id="@+id/multiply"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="*"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
 
@@ -80,7 +72,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="4"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
@@ -89,7 +81,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="5"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
@@ -98,17 +90,10 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="6"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
-        <Button
-                android:id="@+id/divide"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="/"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
 
     </LinearLayout>
 
@@ -123,7 +108,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="1"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
@@ -132,7 +117,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="2"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
@@ -141,8 +126,62 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:text="3"
+                android:textSize="18sp" android:onClick="appendToCalculation"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:id="@+id/dot"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="."
+                android:textSize="18sp" android:onClick="appendToCalculation"/>
+
+
+        <Button
+                android:id="@+id/digit_0"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="0"
+                android:textSize="18sp" android:onClick="appendToCalculation"/>
+
+        <Button
+                android:id="@+id/calculate"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="="
+                android:textSize="18sp" android:onClick="calculateResult"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/add"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="+"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
         <Button
@@ -150,7 +189,61 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
                 android:text="-"
+                android:textSize="18sp" android:onClick="appendToCalculation"/>
+
+        <Button
+                android:id="@+id/divide"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="/"
+                android:textSize="18sp" android:onClick="appendToCalculation"/>
+
+        <Button
+                android:id="@+id/multiply"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="*"
+                android:textSize="18sp" android:onClick="appendToCalculation"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/right_parenthesis"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="("
+                android:textSize="18sp" android:onClick="appendToCalculation"/>
+
+        <Button
+                android:id="@+id/lef_parenthesis"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text=")"
+                android:textSize="18sp" android:onClick="appendToCalculation"/>
+
+        <Button
+                android:id="@+id/factor"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="!"
                 android:textSize="18sp" android:onClick="appendToCalculation"/>
 
 
@@ -167,142 +260,18 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="CE"
+                android:layout_marginEnd="20dp"
+                android:text="CLEAR"
                 android:textSize="18sp" android:onClick="clear"/>
 
         <Button
-                android:id="@+id/digit_0"
+                android:id="@+id/undo"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="0"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-        <Button
-                android:id="@+id/calculate"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="="
-                android:textSize="18sp" android:onClick="calculateResult"/>
-
-        <Button
-                android:id="@+id/add"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-            android:layout_margin="10dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <Button
-                android:id="@+id/right_parenthesis"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="("
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-        <Button
-                android:id="@+id/lef_parenthesis"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text=")"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-        <Button
-                android:id="@+id/factor"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="!"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-        <Button
-                android:id="@+id/dot"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="."
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_margin="10dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <Button
-                android:id="@+id/sin"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="sin"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-        <Button
-                android:id="@+id/cos"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="cos"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-        <Button
-                android:id="@+id/tg"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="tg"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-        <Button
-                android:id="@+id/ctg"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="ctg"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-            android:layout_margin="10dp"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        <Button
-                android:id="@+id/pi"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="pi"
-                android:textSize="18sp" android:onClick="appendToCalculation"/>
+                android:layout_marginEnd="20dp"
+                android:text="undo"
+                android:textSize="18sp" android:onClick="undo"/>
 
     </LinearLayout>
 
